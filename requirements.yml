@@ -1,0 +1,4 @@
+- name: hth-java
+  src: https://github.com/hrafnthor/ansible-java.git
+  scm: git
+  version: "0.0.1"

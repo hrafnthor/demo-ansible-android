@@ -9,6 +9,11 @@
       changed_when: false
       when: ansible_distribution in ["Debian", "Ubuntu"]
    
+- hosts: workstation
+  tags: base
+  become: true
+  roles:
+    - hth-java
 
 # end of run cleanup and reporting
 - hosts: all

@@ -8,3 +8,13 @@ ansible_host:
 
 # The port ansible will use to connect to the host
 ansible_port: 
+
+
+# Configuration for the Java installation role
+#
+##############################################
+java_global: true
+java_vendor: openjdk
+java_type: jdk
+java_version: 19
+java_architecture: amd64
