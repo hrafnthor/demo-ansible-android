@@ -12,9 +12,7 @@ Ansible is particular about certain files and directory structures. The followin
 
 `ansible.cfg` contains the configurations that will be used by Ansible when running the _playbook_. In order:
 
-- `inventory` points to the file defining the inventory of systems that Ansible will touch on. In turn each system defined in the inventory contains a variable file inside the `/host_vars/` directory. 
-
-See the [official documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for more details.  
+- `inventory` points to the file defining the inventory of systems that Ansible will touch on. In turn each system defined in the inventory contains a variable file inside the `/host_vars/` directory. See the [official documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for more details.  
 
 - `log_path` is the absolute path to where the logs should be stored when running the playbook.
 
