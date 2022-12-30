@@ -8,15 +8,26 @@ This branch contains only the skeleton for the playbook being created, and does 
 
 `ansible.cfg` contains the configurations that will be used by Ansible when running the _playbook_. In order:
 
-	- `inventory` points to the file defining the inventory of systems being setup. In turn each system defined in the inventory contains variable file inside the `/host_vars/` directory. See the [official documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for more details.  
+	- `inventory` 	points to the file defining the inventory of systems being setup. 
+					In turn each system defined in the inventory contains variable file 
+					inside the `/host_vars/` directory. 
 
-	- `log_path` is the absolute path to where the logs should be stored when running the playbook.
+					See the [official documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html) for more details.  
 
-	- `retry_files_enabled` dictates if a retry file should be created when tasks fail, as these assist in retrying without running the whole playbook again.
+	- `log_path` 	is the absolute path to where the logs should be stored when 
+					running the playbook.
 
-	- `private_key_file` is the absolute path to the private key part matching the public key used in the bootstrap script. This value has to be filled in.
+	- `retry_files_enabled` 	dictates if a retry file should be created when tasks
+								fail, as these assist in retrying without running the
+								whole playbook again.
 
-	- `remote_user` is the username that Ansible on the server will SSH in as on the client. This is the same user created with the use of the bootstrap script, and needs to be filled in.
+	- `private_key_file` 	is the absolute path to the private key part matching the 
+							public key used in the bootstrap script. This value has to
+							be filled in.
+
+	- `remote_user` 	is the username that Ansible on the server will SSH in as on
+	 					the client. This is the same user created with the use of the
+	 					bootstrap script, and needs to be filled in.
 
 
 `hosts` comes prefilled with a category 'workstation' and one such entity called 'client'. No changes needed here.
@@ -25,9 +36,11 @@ This branch contains only the skeleton for the playbook being created, and does 
 
 It currently only holds two variables for the client (but will hold more in later sections):
 
-	- `ansible_host` either host name as recognized on the network or the IP address of the client. Needs to be filled out.
+	- `ansible_host` 	either host name as recognized on the network or the IP address 
+						of the client. Needs to be filled out.
 
-	- `ansible_port` is the port used when SSH-ing into the client. This would be the same port as was used in the bootstrap script. Needs to be filled in.
+	- `ansible_port` 	is the port used when SSH-ing into the client. This would be the 
+						same port as was used in the bootstrap script. Needs to be filled in.
 
 `playbook.yml` contains at this moment only two differnt task groups, first a package manager updating task and then a cleanup task at the end. Later steps will add tasks to this file to accomplish the setup.
 
