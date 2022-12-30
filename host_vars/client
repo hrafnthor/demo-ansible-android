@@ -10,6 +10,7 @@ ansible_host:
 ansible_port: 
 
 
+#
 # Configuration for the Java installation role
 #
 ##################################################
@@ -20,6 +21,7 @@ java_type: jdk
 java_version: 19
 java_architecture: amd64
 
+#
 # Configuration for the Gradle installation role
 #
 #################################################
@@ -27,3 +29,29 @@ java_architecture: amd64
 gradle_global: true
 gradle_version: "7.6"
 gradle_version_checksum: 8cc27038d5dbd815759851ba53e70cf62e481b87494cc97cfd97982ada5ba634
+
+#
+# Configuration for the Android SDK installation role 
+#
+#####################################################
+
+android_user_home: ".android"
+android_adb_to_path: true
+android_sdkmanager_to_path: true
+android_cmdlinetools_bootstrap_build: 9123335
+android_cmdlinetools_bootstrap_checksum: "0bebf59339eaa534f4217f8aa0972d14dc49e7207be225511073c661ae01da0a"
+android_requested_sdk:
+  build_tools:
+    - version: "33.0.0"
+      channel: 2
+    - version: "31.0.1"
+      channel: 0
+    - version: "29.0.2"
+      channel: 0
+  platforms:
+    - version: 33
+      channel: 2
+    - version. 29
+      channel: 0
+  platform_tools:
+    channel: 0

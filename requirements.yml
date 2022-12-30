@@ -6,3 +6,7 @@
   src: https://github.com/hrafnthor/ansible-gradle.git
   scm: git
   version: "0.0.1"
+- name: hth-android-sdk
+  src: https://github.com/hrafnthor/ansible-android-sdk.git
+  scm: git
+  version: "0.0.1"

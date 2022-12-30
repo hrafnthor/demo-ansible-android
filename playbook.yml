@@ -15,6 +15,7 @@
   roles:
     - hth-java
     - hth-gradle
+    - hth-android-sdk
 
 # end of run cleanup and reporting
 - hosts: all
