@@ -31,6 +31,15 @@ It currently only holds two variables for the client (but will hold more in late
 
 `playbook.yml` contains at this moment only two differnt task groups, first a package manager updating task and then a cleanup task at the end. Later steps will add tasks to this file to accomplish the setup.
 
+#### Verify
+
+To verify that everything functions correctly try running the following command (-vv indicates verbosity):
+
+```shell
+ansible-playbook playbook.yml -vv
+```
+
+If everything is correctly setup then the client system should have its local `apt` package manager updated and cleaned. By adding more `v`'s to the command more verbosity can be gained. And the logs can be viewed in the log file whose location is defined inside the `ansible.cfg` file.
 
 #### Next
 
