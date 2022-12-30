@@ -1,8 +1,8 @@
 _Note: This repository is a part of an article written about using Ansible to setup an Android development environment on an Ubuntu Linux system. The article can be found [here]()_
 
-### Step 2: Java Installation
+### Step 3: Gradle Installation
 
-This branch builds upon the previous one by adding the first use of external _roles_ to install Java onto the system. The external repository for the _role_ is defined in the new file `requirements.yml`, which can be parsed by the command:
+This branch builds upon the previous one by adding the second external _role_ that handles Gradle installation. The module has been added to the `requirements.yml` file and can be processed by running:
 
 ```shell
 ansible-galaxy install -r requirements.yml
@@ -15,16 +15,15 @@ This will allow the use of the _role_ module in a task group inside the `playboo
   become: true
   roles:
     - hth-java
+    - hth-gradle
 ```
 
 And the configurations for the _role_ have been added to the `/host_vars/client` file. These should be changed based on your system preferences:
 
 ```ini
-java_global: true
-java_vendor: openjdk
-java_type: jdk
-java_version: 19
-java_architecture: amd64
+gradle_global: true
+gradle_version: "7.6"
+gradle_version_checksum: 8cc27038d5dbd815759851ba53e70cf62e481b87494cc97cfd97982ada5ba634
 ```
 
 #### Verify
@@ -37,8 +36,8 @@ ansible-playbook playbook.yml -vv
 
 or try using the new `run.sh` script which combines parsing of the `requirements.yml` as well as executing the _playbook_.
 
-Depending on the configuration you went with the client system should now have either the Java JDK or JRE installed. 
+The client system should now have Gradle installed and accessible on the global path.
 
 #### Next
 
-Check out branch 3 for the next steps.
+Check out branch 4 for the next steps.
