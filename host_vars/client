@@ -1,0 +1,60 @@
+# Ansible Host Configuration
+# See documentation: 
+# https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html
+---
+
+
+# The IP or host name of the client
+ansible_host: 
+
+# The port ansible will use to connect to the host
+ansible_port: 
+
+
+# Java
+java_global: true
+java_users: [ansible]
+java_vendor: openjdk
+java_type: jdk
+java_version: 11
+java_architecture: amd64
+
+# Gradle
+gradle_global: false
+gradle_version: "7.6"
+gradle_version_checksum: 8cc27038d5dbd815759851ba53e70cf62e481b87494cc97cfd97982ada5ba634
+gradle_users: [ansible]
+
+# Android SDK
+android_user_home: ".android"
+android_adb_to_path: true
+android_sdkmanager_to_path: true
+android_cmdlinetools_bootstrap_build: 9123335
+android_cmdlinetools_bootstrap_checksum: "0bebf59339eaa534f4217f8aa0972d14dc49e7207be225511073c661ae01da0a"
+android_requested_sdk:
+  build_tools:
+    - version: "33.0.0"
+      channel: 2
+  platforms:
+    - version: 33
+      channel: 0
+  platform_tools:
+    channel: 0
+
+# Android studio
+android_studio_path: "/opt/android-studio"
+android_studio_clients:
+  - version: "2022.2.1.9"
+    checksum: "7e7868b83bca8255f690e6c7fe026a3f3be1e140d2f09682c2b150af8cf93550"
+  - version: "2021.3.1.17"
+    checksum: "89adb0ce0ffa46b7894e7bfedb142b1f5d52c43c171e6a6cb9a95a49f77756ca"
+android_studio_primary:
+  version: "2021.3.1.17"
+  desktop: 
+    create: yes
+    name: "AStudio Stable"
+android_studio_canary: 
+  version: "2022.2.1.9"
+  desktop: 
+    create: yes
+    name: "AStudio Canary"
