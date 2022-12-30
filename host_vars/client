@@ -12,9 +12,18 @@ ansible_port:
 
 # Configuration for the Java installation role
 #
-##############################################
+##################################################
+
 java_global: true
 java_vendor: openjdk
 java_type: jdk
 java_version: 19
 java_architecture: amd64
+
+# Configuration for the Gradle installation role
+#
+#################################################
+
+gradle_global: true
+gradle_version: "7.6"
+gradle_version_checksum: 8cc27038d5dbd815759851ba53e70cf62e481b87494cc97cfd97982ada5ba634
