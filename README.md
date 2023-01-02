@@ -52,4 +52,4 @@ If everything is correctly setup then the client system should have its local `a
 
 #### Next
 
-When all relevant fields have been filled in, check out branch 3 for the next steps.
+When all relevant fields have been filled in, check out branch 2 for the next steps.
