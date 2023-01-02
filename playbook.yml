@@ -16,6 +16,7 @@
     - hth-java
     - hth-gradle
     - hth-android-sdk
+    - hth-android-studio
 
 # end of run cleanup and reporting
 - hosts: all

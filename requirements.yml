@@ -10,3 +10,7 @@
   src: https://github.com/hrafnthor/ansible-android-sdk.git
   scm: git
   version: "0.0.1"
+- name: hth-android-studio
+  src: https://github.com/hrafnthor/ansible-android-studio.git
+  scm: git
+  version: "0.0.1"

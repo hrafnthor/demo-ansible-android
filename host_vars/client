@@ -55,3 +55,25 @@ android_requested_sdk:
       channel: 0
   platform_tools:
     channel: 0
+
+#
+# Configuration for the Android Studio installation role 
+#
+#########################################################
+
+android_studio_path: "/opt/android-studio"
+android_studio_clients:
+  - version: "2022.2.1.9"
+    checksum: "7e7868b83bca8255f690e6c7fe026a3f3be1e140d2f09682c2b150af8cf93550"
+  - version: "2021.3.1.17"
+    checksum: "89adb0ce0ffa46b7894e7bfedb142b1f5d52c43c171e6a6cb9a95a49f77756ca"
+android_studio_primary:
+  version: "2021.3.1.17"
+  desktop: 
+    create: yes
+    name: "AStudio Stable"
+android_studio_canary: 
+  version: "2022.2.1.9"
+  desktop: 
+    create: yes
+    name: "AStudio Canary"
