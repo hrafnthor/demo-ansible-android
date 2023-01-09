@@ -51,7 +51,7 @@ android_requested_sdk:
   platforms:
     - version: 33
       channel: 2
-    - version. 29
+    - version: 29
       channel: 0
   platform_tools:
     channel: 0
